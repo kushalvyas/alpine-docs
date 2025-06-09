@@ -398,31 +398,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="alpine.vis.geometry.html">alpine.vis.geometry package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="alpine.vis.geometry.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="alpine.vis.geometry.html#module-alpine.vis.geometry.local_complexity">alpine.vis.geometry.local_complexity module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="alpine.vis.geometry.html#alpine.vis.geometry.local_complexity.flatten_model"><code class="docutils literal notranslate"><span class="pre">flatten_model()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="alpine.vis.geometry.html#alpine.vis.geometry.local_complexity.get_intersections_for_hulls"><code class="docutils literal notranslate"><span class="pre">get_intersections_for_hulls()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="alpine.vis.geometry.html#alpine.vis.geometry.local_complexity.get_layer_intersections_batched"><code class="docutils literal notranslate"><span class="pre">get_layer_intersections_batched()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="alpine.vis.geometry.html#alpine.vis.geometry.local_complexity.get_ortho_hull_around_samples"><code class="docutils literal notranslate"><span class="pre">get_ortho_hull_around_samples()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="alpine.vis.geometry.html#alpine.vis.geometry.local_complexity.get_ortho_hull_around_samples_w_orig"><code class="docutils literal notranslate"><span class="pre">get_ortho_hull_around_samples_w_orig()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="alpine.vis.geometry.html#alpine.vis.geometry.local_complexity.sample_ortho_random"><code class="docutils literal notranslate"><span class="pre">sample_ortho_random()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="alpine.vis.geometry.html#alpine.vis.geometry.local_complexity.split_generator"><code class="docutils literal notranslate"><span class="pre">split_generator()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="alpine.vis.geometry.html#module-alpine.vis.geometry.partitions">alpine.vis.geometry.partitions module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="alpine.vis.geometry.html#alpine.vis.geometry.partitions.partitions"><code class="docutils literal notranslate"><span class="pre">partitions</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="alpine.vis.geometry.html#alpine.vis.geometry.partitions.partitions.device"><code class="docutils literal notranslate"><span class="pre">partitions.device</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="alpine.vis.geometry.html#alpine.vis.geometry.partitions.partitions.get_partitions_from_inr"><code class="docutils literal notranslate"><span class="pre">partitions.get_partitions_from_inr()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="alpine.vis.geometry.html#alpine.vis.geometry.partitions.partitions.model_flatten_func"><code class="docutils literal notranslate"><span class="pre">partitions.model_flatten_func()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="alpine.vis.geometry.html#alpine.vis.geometry.partitions.partitions.n"><code class="docutils literal notranslate"><span class="pre">partitions.n</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="alpine.vis.geometry.html#alpine.vis.geometry.partitions.partitions.r"><code class="docutils literal notranslate"><span class="pre">partitions.r</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="alpine.vis.geometry.html#alpine.vis.geometry.partitions.partitions.show_partitions"><code class="docutils literal notranslate"><span class="pre">partitions.show_partitions()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="alpine.vis.geometry.html#alpine.vis.geometry.partitions.plot_partitions"><code class="docutils literal notranslate"><span class="pre">plot_partitions()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="alpine.vis.geometry.html#alpine.vis.geometry.partitions.show_partitions"><code class="docutils literal notranslate"><span class="pre">show_partitions()</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="alpine.vis.geometry.html#module-alpine.vis.geometry">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alpine.vis.geometry.html#alpine-vis-geometry-local-complexity-module">alpine.vis.geometry.local_complexity module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alpine.vis.geometry.html#alpine-vis-geometry-partitions-module">alpine.vis.geometry.partitions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alpine.vis.geometry.html#module-contents">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -431,98 +409,14 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">#</a></h2>
 </section>
-<section id="module-alpine.vis.clustering">
-<span id="alpine-vis-clustering-module"></span><h2>alpine.vis.clustering module<a class="headerlink" href="#module-alpine.vis.clustering" title="Link to this heading">#</a></h2>
-<dl class="py class">
-<dt class="sig sig-object py" id="alpine.vis.clustering.KMeans">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">alpine.vis.clustering.</span></span><span class="sig-name descname"><span class="pre">KMeans</span></span><a class="headerlink" href="#alpine.vis.clustering.KMeans" title="Link to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>KMeans clustering algorithm.
-This class wraps the sklearn KMeans implementation and provides a simple interface for fitting and predicting clusters.</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="alpine.vis.clustering.KMeans.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_clusters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#alpine.vis.clustering.KMeans.__init__" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="alpine.vis.clustering.KMeans.fit">
-<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#alpine.vis.clustering.KMeans.fit" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="alpine.vis.clustering.KMeans.fit_predict">
-<span class="sig-name descname"><span class="pre">fit_predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_shape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#alpine.vis.clustering.KMeans.fit_predict" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="alpine.vis.clustering.KMeans.predict">
-<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_shape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#alpine.vis.clustering.KMeans.predict" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
+<section id="alpine-vis-clustering-module">
+<h2>alpine.vis.clustering module<a class="headerlink" href="#alpine-vis-clustering-module" title="Link to this heading">#</a></h2>
 </section>
-<section id="module-alpine.vis.pca">
-<span id="alpine-vis-pca-module"></span><h2>alpine.vis.pca module<a class="headerlink" href="#module-alpine.vis.pca" title="Link to this heading">#</a></h2>
-<dl class="py function">
-<dt class="sig sig-object py" id="alpine.vis.pca.check_tensor_dtype">
-<span class="sig-prename descclassname"><span class="pre">alpine.vis.pca.</span></span><span class="sig-name descname"><span class="pre">check_tensor_dtype</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#alpine.vis.pca.check_tensor_dtype" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="alpine.vis.pca.compute_pca_features">
-<span class="sig-prename descclassname"><span class="pre">alpine.vis.pca.</span></span><span class="sig-name descname"><span class="pre">compute_pca_features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inr_features</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_components</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">signal_shape</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pca_preprocess_whiten</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_max_normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalization_axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(-1,)</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#alpine.vis.pca.compute_pca_features" title="Link to this definition">#</a></dt>
-<dd><p>_summary_</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>inr_features</strong> (<em>_type_</em>) – _description_</p></li>
-<li><p><strong>num_components</strong> (<em>_type_</em>) – _description_</p></li>
-<li><p><strong>signal_shape</strong> (<em>_type_</em>) – _description_</p></li>
-<li><p><strong>pca_preprocess_whiten</strong> (<em>bool</em><em>, </em><em>optional</em>) – _description_. Defaults to True.</p></li>
-<li><p><strong>min_max_normalize</strong> (<em>bool</em><em>, </em><em>optional</em>) – _description_. Defaults to True.</p></li>
-<li><p><strong>kwargs</strong> – keyword arguments for sklearn.decomposition.PCA</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="alpine.vis.pca.compute_pca_features_batch">
-<span class="sig-prename descclassname"><span class="pre">alpine.vis.pca.</span></span><span class="sig-name descname"><span class="pre">compute_pca_features_batch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inr_features</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_components</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">signal_shape</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pca_preprocess_whiten</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_max_normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalization_axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(-1,)</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#alpine.vis.pca.compute_pca_features_batch" title="Link to this definition">#</a></dt>
-<dd><p>_summary_</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>inr_features</strong> (<em>_type_</em>) – _description_</p></li>
-<li><p><strong>num_components</strong> (<em>_type_</em>) – _description_</p></li>
-<li><p><strong>signal_shape</strong> (<em>_type_</em>) – _description_</p></li>
-<li><p><strong>pca_preprocess_whiten</strong> (<em>bool</em><em>, </em><em>optional</em>) – _description_. Defaults to True.</p></li>
-<li><p><strong>min_max_normalize</strong> (<em>bool</em><em>, </em><em>optional</em>) – _description_. Defaults to True.</p></li>
-<li><p><strong>kwargs</strong> – keyword arguments for sklearn.decomposition.PCA</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="alpine.vis.pca.compute_pca_layerwise">
-<span class="sig-prename descclassname"><span class="pre">alpine.vis.pca.</span></span><span class="sig-name descname"><span class="pre">compute_pca_layerwise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inr_features</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_components</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">signal_shape</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pca_preprocess_whiten</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_max_normalize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalization_axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(-1,)</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#alpine.vis.pca.compute_pca_layerwise" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="alpine.vis.pca.normalize_fn">
-<span class="sig-prename descclassname"><span class="pre">alpine.vis.pca.</span></span><span class="sig-name descname"><span class="pre">normalize_fn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#alpine.vis.pca.normalize_fn" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="alpine.vis.pca.return_as_torch">
-<span class="sig-prename descclassname"><span class="pre">alpine.vis.pca.</span></span><span class="sig-name descname"><span class="pre">return_as_torch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#alpine.vis.pca.return_as_torch" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
+<section id="alpine-vis-pca-module">
+<h2>alpine.vis.pca module<a class="headerlink" href="#alpine-vis-pca-module" title="Link to this heading">#</a></h2>
 </section>
-<section id="module-alpine.vis">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-alpine.vis" title="Link to this heading">#</a></h2>
+<section id="module-contents">
+<h2>Module contents<a class="headerlink" href="#module-contents" title="Link to this heading">#</a></h2>
 </section>
 </section>
 
@@ -551,26 +445,9 @@ This class wraps the sklearn KMeans implementation and provides a simple interfa
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subpackages">Subpackages</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-alpine.vis.clustering">alpine.vis.clustering module</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alpine.vis.clustering.KMeans"><code class="docutils literal notranslate"><span class="pre">KMeans</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#alpine.vis.clustering.KMeans.__init__"><code class="docutils literal notranslate"><span class="pre">KMeans.__init__()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#alpine.vis.clustering.KMeans.fit"><code class="docutils literal notranslate"><span class="pre">KMeans.fit()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#alpine.vis.clustering.KMeans.fit_predict"><code class="docutils literal notranslate"><span class="pre">KMeans.fit_predict()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#alpine.vis.clustering.KMeans.predict"><code class="docutils literal notranslate"><span class="pre">KMeans.predict()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-alpine.vis.pca">alpine.vis.pca module</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alpine.vis.pca.check_tensor_dtype"><code class="docutils literal notranslate"><span class="pre">check_tensor_dtype()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alpine.vis.pca.compute_pca_features"><code class="docutils literal notranslate"><span class="pre">compute_pca_features()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alpine.vis.pca.compute_pca_features_batch"><code class="docutils literal notranslate"><span class="pre">compute_pca_features_batch()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alpine.vis.pca.compute_pca_layerwise"><code class="docutils literal notranslate"><span class="pre">compute_pca_layerwise()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alpine.vis.pca.normalize_fn"><code class="docutils literal notranslate"><span class="pre">normalize_fn()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alpine.vis.pca.return_as_torch"><code class="docutils literal notranslate"><span class="pre">return_as_torch()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-alpine.vis">Module contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alpine-vis-clustering-module">alpine.vis.clustering module</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alpine-vis-pca-module">alpine.vis.pca module</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-contents">Module contents</a></li>
 </ul>
   </nav></div>
 

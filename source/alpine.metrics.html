@@ -395,43 +395,11 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">#</a></h2>
 </section>
-<section id="module-alpine.metrics.ssim">
-<span id="alpine-metrics-ssim-module"></span><h2>alpine.metrics.ssim module<a class="headerlink" href="#module-alpine.metrics.ssim" title="Link to this heading">#</a></h2>
-<dl class="py class">
-<dt class="sig sig-object py" id="alpine.metrics.ssim.SSIM">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">alpine.metrics.ssim.</span></span><span class="sig-name descname"><span class="pre">SSIM</span></span><a class="headerlink" href="#alpine.metrics.ssim.SSIM" title="Link to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Metric</span></code></p>
-<p>Structural Similarity Index (SSIM) metric.
-Example shows how to use a subclass torchmetrics.Metric to create a custom metric.</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="alpine.metrics.ssim.SSIM.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">signal_shape</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_range</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kernel_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">11</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reduction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'elementwise_mean'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#alpine.metrics.ssim.SSIM.__init__" title="Link to this definition">#</a></dt>
-<dd><p>Initialize internal Module state, shared by both nn.Module and ScriptModule.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="alpine.metrics.ssim.SSIM.compute">
-<span class="sig-name descname"><span class="pre">compute</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#alpine.metrics.ssim.SSIM.compute" title="Link to this definition">#</a></dt>
-<dd><p>Override this method to compute the final metric value.</p>
-<p>This method will automatically synchronize state variables when running in distributed backend.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="alpine.metrics.ssim.SSIM.higher_is_better">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">higher_is_better</span></span><a class="headerlink" href="#alpine.metrics.ssim.SSIM.higher_is_better" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="alpine.metrics.ssim.SSIM.update">
-<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#alpine.metrics.ssim.SSIM.update" title="Link to this definition">#</a></dt>
-<dd><p>Override this method to update the state variables of your metric class.</p>
-</dd></dl>
-
-</dd></dl>
-
+<section id="alpine-metrics-ssim-module">
+<h2>alpine.metrics.ssim module<a class="headerlink" href="#alpine-metrics-ssim-module" title="Link to this heading">#</a></h2>
 </section>
-<section id="module-alpine.metrics">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-alpine.metrics" title="Link to this heading">#</a></h2>
+<section id="module-contents">
+<h2>Module contents<a class="headerlink" href="#module-contents" title="Link to this heading">#</a></h2>
 </section>
 </section>
 
@@ -459,17 +427,8 @@ Example shows how to use a subclass torchmetrics.Metric to create a custom metri
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-alpine.metrics.ssim">alpine.metrics.ssim module</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alpine.metrics.ssim.SSIM"><code class="docutils literal notranslate"><span class="pre">SSIM</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#alpine.metrics.ssim.SSIM.__init__"><code class="docutils literal notranslate"><span class="pre">SSIM.__init__()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#alpine.metrics.ssim.SSIM.compute"><code class="docutils literal notranslate"><span class="pre">SSIM.compute()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#alpine.metrics.ssim.SSIM.higher_is_better"><code class="docutils literal notranslate"><span class="pre">SSIM.higher_is_better</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#alpine.metrics.ssim.SSIM.update"><code class="docutils literal notranslate"><span class="pre">SSIM.update()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-alpine.metrics">Module contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alpine-metrics-ssim-module">alpine.metrics.ssim module</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-contents">Module contents</a></li>
 </ul>
   </nav></div>
 

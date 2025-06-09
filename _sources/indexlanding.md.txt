@@ -31,17 +31,20 @@ For more instructions on how to install `alpine` please see our [installation in
 
 ::::{grid} 4
 :::{grid-item-card}  Flexible
-A
+Alpine provides modular interfaces for prototyping and testing neural representations. Alpine also offers highly reconfigurable training workflows that allow for custom forward model via closures and loss functions.
 :::
 :::{grid-item-card}  Distributed
-B
+We use PyTorch lightning to scale Alpine across multiple GPUs. Alpine offers seamless integration with Pytorch lightning using its custom lightining trainer.
 :::
 :::{grid-item-card}  Interpretability
-A
+Alpine provides a rich set of visualization tools ( and many more to be added) that allow you to peer deep into the features learned by the INR.
 :::
 :::{grid-item-card}  Extensible
-B
+Written in PyTorch, Alpine can be seamlessly integrated with other PyTorch libraries and models. 
 :::
 ::::
 
 
+:::{important}
+Alpine is work in progress. We appreciate any constructive community feedback and support. We invite all the researchers across all disciplines to explore, and suggest any features you find particularly useful. Our goal is to make `Alpine` the go-to place for scientific computing using INRs!
+:::

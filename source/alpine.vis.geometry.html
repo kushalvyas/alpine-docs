@@ -398,185 +398,14 @@
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">#</a></h2>
 </section>
-<section id="module-alpine.vis.geometry.local_complexity">
-<span id="alpine-vis-geometry-local-complexity-module"></span><h2>alpine.vis.geometry.local_complexity module<a class="headerlink" href="#module-alpine.vis.geometry.local_complexity" title="Link to this heading">#</a></h2>
-<p>Code is adapted from
-Deep Networks Always Grok and Here is Why,  Humayun et.al., ICML 2024
-<a class="github reference external" href="https://github.com/AhmedImtiazPrio/grok-adversarial/">AhmedImtiazPrio/grok-adversarial</a></p>
-<dl class="py function">
-<dt class="sig sig-object py" id="alpine.vis.geometry.local_complexity.flatten_model">
-<span class="sig-prename descclassname"><span class="pre">alpine.vis.geometry.local_complexity.</span></span><span class="sig-name descname"><span class="pre">flatten_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">whitelist_keywords</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#alpine.vis.geometry.local_complexity.flatten_model" title="Link to this definition">#</a></dt>
-<dd><p>flatten the modules in a model into a list
-whitelist_keywords: modules containing keywords will not be split</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="alpine.vis.geometry.local_complexity.get_intersections_for_hulls">
-<span class="sig-prename descclassname"><span class="pre">alpine.vis.geometry.local_complexity.</span></span><span class="sig-name descname"><span class="pre">get_intersections_for_hulls</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hulls</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">activation_buffer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">32</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shift_output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#alpine.vis.geometry.local_complexity.get_intersections_for_hulls" title="Link to this definition">#</a></dt>
-<dd><p>sampler: sampling function to sample domain around each sample
-batch_size: number of samples to take for each forward pass.
-effective gpu batch_size is hull_n*batch_size</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="alpine.vis.geometry.local_complexity.get_layer_intersections_batched">
-<span class="sig-prename descclassname"><span class="pre">alpine.vis.geometry.local_complexity.</span></span><span class="sig-name descname"><span class="pre">get_layer_intersections_batched</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layer_names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">activation_buffer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">batch_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#alpine.vis.geometry.local_complexity.get_layer_intersections_batched" title="Link to this definition">#</a></dt>
-<dd><p>Input:
-layer_names: list with elements as strings or tuples of strings.
-activation_buffer: dictionary containing all activations</p>
-<p>Output:
-Number and percentage of intersections for each member of layer_names</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="alpine.vis.geometry.local_complexity.get_ortho_hull_around_samples">
-<span class="sig-prename descclassname"><span class="pre">alpine.vis.geometry.local_complexity.</span></span><span class="sig-name descname"><span class="pre">get_ortho_hull_around_samples</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#alpine.vis.geometry.local_complexity.get_ortho_hull_around_samples" title="Link to this definition">#</a></dt>
-<dd><p>x: batchsize x channels x dim1 x dim2
-r: max radius of hull
-n: number of samples</p>
-<p>returns:
-s: batchsize x n_samples x channels x dim1 x dim2</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="alpine.vis.geometry.local_complexity.get_ortho_hull_around_samples_w_orig">
-<span class="sig-prename descclassname"><span class="pre">alpine.vis.geometry.local_complexity.</span></span><span class="sig-name descname"><span class="pre">get_ortho_hull_around_samples_w_orig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">11</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#alpine.vis.geometry.local_complexity.get_ortho_hull_around_samples_w_orig" title="Link to this definition">#</a></dt>
-<dd><p>x: batchsize x channels x dim1 x dim2
-r: max radius of hull
-n: number of samples</p>
-<p>returns:
-s: batchsize x n_samples x channels x dim1 x dim2</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="alpine.vis.geometry.local_complexity.sample_ortho_random">
-<span class="sig-prename descclassname"><span class="pre">alpine.vis.geometry.local_complexity.</span></span><span class="sig-name descname"><span class="pre">sample_ortho_random</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#alpine.vis.geometry.local_complexity.sample_ortho_random" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="alpine.vis.geometry.local_complexity.split_generator">
-<span class="sig-prename descclassname"><span class="pre">alpine.vis.geometry.local_complexity.</span></span><span class="sig-name descname"><span class="pre">split_generator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">generator</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#alpine.vis.geometry.local_complexity.split_generator" title="Link to this definition">#</a></dt>
-<dd><p>Split tuple elements in a generator into lists</p>
-</dd></dl>
-
+<section id="alpine-vis-geometry-local-complexity-module">
+<h2>alpine.vis.geometry.local_complexity module<a class="headerlink" href="#alpine-vis-geometry-local-complexity-module" title="Link to this heading">#</a></h2>
 </section>
-<section id="module-alpine.vis.geometry.partitions">
-<span id="alpine-vis-geometry-partitions-module"></span><h2>alpine.vis.geometry.partitions module<a class="headerlink" href="#module-alpine.vis.geometry.partitions" title="Link to this heading">#</a></h2>
-<dl class="py class">
-<dt class="sig sig-object py" id="alpine.vis.geometry.partitions.partitions">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">alpine.vis.geometry.partitions.</span></span><span class="sig-name descname"><span class="pre">partitions</span></span><a class="headerlink" href="#alpine.vis.geometry.partitions.partitions" title="Link to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>_summary_</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>_description_</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>_type_</p>
-</dd>
-</dl>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="alpine.vis.geometry.partitions.partitions.device">
-<span class="sig-name descname"><span class="pre">device</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">device(type='cuda')</span></em><a class="headerlink" href="#alpine.vis.geometry.partitions.partitions.device" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="alpine.vis.geometry.partitions.partitions.get_partitions_from_inr">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_partitions_from_inr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_bounds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_bounds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">signal_dims</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sampled_points</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sampled_points_batch_sizes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">256</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#alpine.vis.geometry.partitions.partitions.get_partitions_from_inr" title="Link to this definition">#</a></dt>
-<dd><p>_summary_</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>x_bounds</strong> (<em>_type_</em>) – _description_</p></li>
-<li><p><strong>y_bounds</strong> (<em>_type_</em>) – _description_</p></li>
-<li><p><strong>model</strong> (<em>_type_</em>) – _description_</p></li>
-<li><p><strong>signal_dims</strong> (<em>_type_</em>) – _description_</p></li>
-<li><p><strong>sampled_points</strong> (<em>_type_</em>) – _description_</p></li>
-<li><p><strong>sampled_points_batch_sizes</strong> (<em>int</em><em>, </em><em>optional</em>) – _description_. Defaults to 256.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>_description_</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>_type_</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="alpine.vis.geometry.partitions.partitions.model_flatten_func">
-<span class="sig-name descname"><span class="pre">model_flatten_func</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">whitelist_keywords</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#alpine.vis.geometry.partitions.partitions.model_flatten_func" title="Link to this definition">#</a></dt>
-<dd><p>flatten the modules in a model into a list
-whitelist_keywords: modules containing keywords will not be split</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="alpine.vis.geometry.partitions.partitions.n">
-<span class="sig-name descname"><span class="pre">n</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#alpine.vis.geometry.partitions.partitions.n" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="alpine.vis.geometry.partitions.partitions.r">
-<span class="sig-name descname"><span class="pre">r</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.0019</span></em><a class="headerlink" href="#alpine.vis.geometry.partitions.partitions.r" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="alpine.vis.geometry.partitions.partitions.show_partitions">
-<span class="sig-name descname"><span class="pre">show_partitions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">normalize_each</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(10,</span> <span class="pre">15)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dpi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#alpine.vis.geometry.partitions.partitions.show_partitions" title="Link to this definition">#</a></dt>
-<dd><p>_summary_</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>partitions</strong> (<em>_type_</em>) – _description_</p></li>
-<li><p><strong>normalize_each</strong> (<em>bool</em><em>, </em><em>optional</em>) – _description_. Defaults to False.</p></li>
-<li><p><strong>title</strong> (<em>str</em><em>, </em><em>optional</em>) – _description_. Defaults to ‘’.</p></li>
-<li><p><strong>figsize</strong> (<em>tuple</em><em>, </em><em>optional</em>) – _description_. Defaults to (10,15).</p></li>
-<li><p><strong>dpi</strong> (<em>int</em><em>, </em><em>optional</em>) – _description_. Defaults to 200.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="alpine.vis.geometry.partitions.plot_partitions">
-<span class="sig-prename descclassname"><span class="pre">alpine.vis.geometry.partitions.</span></span><span class="sig-name descname"><span class="pre">plot_partitions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">partition_images_set</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_each</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(10,</span> <span class="pre">15)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dpi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">200</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#alpine.vis.geometry.partitions.plot_partitions" title="Link to this definition">#</a></dt>
-<dd><p>_summary_</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>partition_images_set</strong> (<em>_type_</em>) – _description_</p></li>
-<li><p><strong>normalize_each</strong> (<em>bool</em><em>, </em><em>optional</em>) – _description_. Defaults to False.</p></li>
-<li><p><strong>title</strong> (<em>str</em><em>, </em><em>optional</em>) – _description_. Defaults to ‘’.</p></li>
-<li><p><strong>figsize</strong> (<em>tuple</em><em>, </em><em>optional</em>) – _description_. Defaults to (10,15).</p></li>
-<li><p><strong>dpi</strong> (<em>int</em><em>, </em><em>optional</em>) – _description_. Defaults to 200.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="alpine.vis.geometry.partitions.show_partitions">
-<span class="sig-prename descclassname"><span class="pre">alpine.vis.geometry.partitions.</span></span><span class="sig-name descname"><span class="pre">show_partitions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">partitions</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_each</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(10,</span> <span class="pre">15)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dpi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#alpine.vis.geometry.partitions.show_partitions" title="Link to this definition">#</a></dt>
-<dd><p>_summary_</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>partitions</strong> (<em>_type_</em>) – _description_</p></li>
-<li><p><strong>normalize_each</strong> (<em>bool</em><em>, </em><em>optional</em>) – _description_. Defaults to False.</p></li>
-<li><p><strong>title</strong> (<em>str</em><em>, </em><em>optional</em>) – _description_. Defaults to ‘’.</p></li>
-<li><p><strong>figsize</strong> (<em>tuple</em><em>, </em><em>optional</em>) – _description_. Defaults to (10,15).</p></li>
-<li><p><strong>dpi</strong> (<em>int</em><em>, </em><em>optional</em>) – _description_. Defaults to 200.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
+<section id="alpine-vis-geometry-partitions-module">
+<h2>alpine.vis.geometry.partitions module<a class="headerlink" href="#alpine-vis-geometry-partitions-module" title="Link to this heading">#</a></h2>
 </section>
-<section id="module-alpine.vis.geometry">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-alpine.vis.geometry" title="Link to this heading">#</a></h2>
+<section id="module-contents">
+<h2>Module contents<a class="headerlink" href="#module-contents" title="Link to this heading">#</a></h2>
 </section>
 </section>
 
@@ -604,31 +433,9 @@ whitelist_keywords: modules containing keywords will not be split</p>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-alpine.vis.geometry.local_complexity">alpine.vis.geometry.local_complexity module</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alpine.vis.geometry.local_complexity.flatten_model"><code class="docutils literal notranslate"><span class="pre">flatten_model()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alpine.vis.geometry.local_complexity.get_intersections_for_hulls"><code class="docutils literal notranslate"><span class="pre">get_intersections_for_hulls()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alpine.vis.geometry.local_complexity.get_layer_intersections_batched"><code class="docutils literal notranslate"><span class="pre">get_layer_intersections_batched()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alpine.vis.geometry.local_complexity.get_ortho_hull_around_samples"><code class="docutils literal notranslate"><span class="pre">get_ortho_hull_around_samples()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alpine.vis.geometry.local_complexity.get_ortho_hull_around_samples_w_orig"><code class="docutils literal notranslate"><span class="pre">get_ortho_hull_around_samples_w_orig()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alpine.vis.geometry.local_complexity.sample_ortho_random"><code class="docutils literal notranslate"><span class="pre">sample_ortho_random()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alpine.vis.geometry.local_complexity.split_generator"><code class="docutils literal notranslate"><span class="pre">split_generator()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-alpine.vis.geometry.partitions">alpine.vis.geometry.partitions module</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alpine.vis.geometry.partitions.partitions"><code class="docutils literal notranslate"><span class="pre">partitions</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#alpine.vis.geometry.partitions.partitions.device"><code class="docutils literal notranslate"><span class="pre">partitions.device</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#alpine.vis.geometry.partitions.partitions.get_partitions_from_inr"><code class="docutils literal notranslate"><span class="pre">partitions.get_partitions_from_inr()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#alpine.vis.geometry.partitions.partitions.model_flatten_func"><code class="docutils literal notranslate"><span class="pre">partitions.model_flatten_func()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#alpine.vis.geometry.partitions.partitions.n"><code class="docutils literal notranslate"><span class="pre">partitions.n</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#alpine.vis.geometry.partitions.partitions.r"><code class="docutils literal notranslate"><span class="pre">partitions.r</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#alpine.vis.geometry.partitions.partitions.show_partitions"><code class="docutils literal notranslate"><span class="pre">partitions.show_partitions()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alpine.vis.geometry.partitions.plot_partitions"><code class="docutils literal notranslate"><span class="pre">plot_partitions()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#alpine.vis.geometry.partitions.show_partitions"><code class="docutils literal notranslate"><span class="pre">show_partitions()</span></code></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-alpine.vis.geometry">Module contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alpine-vis-geometry-local-complexity-module">alpine.vis.geometry.local_complexity module</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alpine-vis-geometry-partitions-module">alpine.vis.geometry.partitions module</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-contents">Module contents</a></li>
 </ul>
   </nav></div>
 
