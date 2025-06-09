@@ -24,7 +24,7 @@ Alpine - a pytorch library for implicit neural representations.
    examples.md
    contributing.md
 
-.. bibliography:: references.bib
+
 
 .. Indices and tables
 .. ==================
